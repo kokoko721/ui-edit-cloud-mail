@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    scrollbar-width: thin;
+    scrollbar-color: var(--dark-border) transparent;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+}
+
+:deep(.el-input__inner:focus) {
+    background-color: transparent !important;
+    border-color: #dcdfe6 !important;
+}
+
+.el-table thead th {
+    font-weight: bold !important;
+}
+
+body {
+    font-family: -apple-system, Inter, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    line-height: 1.5;
+    color: var(--el-text-color-primary);
+    font-size: 14px;
+    background: var(--app-background);
+}
+
+html, body {
+    background: var(--app-background);
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+.el-message {
+    white-space: nowrap !important;
+}
+
+.message-bottom {
+    top: auto !important;
+    bottom: 20px !important;
+
+    .el-icon {
+        display: none !important;
+    }
+}
+
+.el-input-group__append, .el-input-group__prepend {
+    color: var(--el-text-color-primary) !important;
+}
+
+.tox .tox-dialog__iframe.tox-dialog__iframe--opaque {
+    background-color: var(--el-bg-color) !important;
+}
+
+.tox .tox-dialog--width-lg {
+    height: 850px !important;
+    @media (max-width: 1024px) {
+        height: calc(100% - 40px) !important;
+    }
+}
+
+.tox .tox-dialog__body-content {
+    overflow: initial !important;
+    max-height: min(850px, calc(100vh - 110px)) !important;
+    @media (max-width: 1024px) {
+        box-sizing: initial !important;
+        max-height: min(850px, calc(100% - 40px)) !important;
+    }
+}
+
+.tox-dialog__body-content {
+    height: auto !important;
+    flex-basis: auto !important;
+}
+
+.tox .tox-collection--grid .tox-collection__group {
+    max-height: 220px !important;
+}
+.tox .tox-collection--list .tox-collection__item--active:not(.tox-collection__item--state-disabled) {
+    background-color: var(--surface-selected) !important;
+    color: var(--el-color-primary) !important;
+}
+
+/* ---- TinyMCE MD3 全局覆盖 ---- */
+.tox .tox-toolbar,
+.tox .tox-toolbar__overflow,
+.tox .tox-toolbar__primary {
+    background: var(--surface-background) !important;
+    border-bottom: 1px solid var(--light-border-color) !important;
+}
+
+.tox .tox-tbtn {
+    color: var(--el-text-color-secondary) !important;
+}
+.tox .tox-tbtn:hover {
+    background: var(--surface-hover) !important;
+    color: var(--el-text-color-primary) !important;
+}
+.tox .tox-tbtn--active,
+.tox .tox-tbtn--active:hover {
+    background: var(--surface-selected) !important;
+    color: var(--el-color-primary) !important;
+}
+.tox .tox-tbtn--enabled,
+.tox .tox-tbtn--enabled:hover {
+    background: var(--surface-selected) !important;
+    color: var(--el-color-primary) !important;
+}
+.tox .tox-tbtn svg {
+    fill: var(--el-text-color-secondary) !important;
+}
+.tox .tox-tbtn--active svg,
+.tox .tox-tbtn--enabled svg,
+.tox .tox-tbtn:hover svg {
+    fill: var(--el-color-primary) !important;
+}
+
+.tox .tox-split-button:hover {
+    box-shadow: 0 0 0 1px var(--surface-hover) inset !important;
+}
+
+.tox .tox-edit-area__iframe {
+    background: var(--surface-background) !important;
+}
+
+.tox .tox-collection__item {
+    color: var(--el-text-color-secondary) !important;
+}
+.tox .tox-collection__item--enabled {
+    background: var(--surface-hover) !important;
+    color: var(--el-text-color-primary) !important;
+}
+
+.tox .tox-menu {
+    background: var(--surface-container) !important;
+    border: 1px solid var(--light-border-color) !important;
+}
+
+.tox .tox-collection--list .tox-collection__group {
+    border-color: var(--light-border-color) !important;
+}
+
+.tox .tox-label,
+.tox .tox-toolbar-label {
+    color: var(--el-text-color-secondary) !important;
+}
+
+.tox .tox-dialog {
+    background: var(--surface-background) !important;
+    border: 1px solid var(--light-border-color) !important;
+}
+.tox .tox-dialog__header,
+.tox .tox-dialog__footer {
+    background: var(--surface-background) !important;
+    border-color: var(--light-border-color) !important;
+}
+.tox .tox-dialog__title {
+    color: var(--el-text-color-primary) !important;
+}
+
+.tox .tox-button {
+    background: var(--surface-container-high) !important;
+    color: var(--el-text-color-primary) !important;
+    border: 1px solid var(--light-border-color) !important;
+    border-radius: 20px !important;
+}
+.tox .tox-button:hover {
+    background: var(--surface-hover) !important;
+}
+.tox .tox-button--secondary {
+    background: var(--surface-container) !important;
+}
+.tox .tox-button--secondary:hover {
+    background: var(--surface-hover) !important;
+}
+
+.tox .tox-textfield,
+.tox .tox-listboxfield .tox-listbox--select,
+.tox .tox-textarea {
+    background: var(--surface-container) !important;
+    color: var(--el-text-color-primary) !important;
+    border-color: var(--light-border-color) !important;
+}
+.tox .tox-textfield:focus {
+    border-color: var(--el-color-primary) !important;
+}
+
+.tox .tox-dialog__body-nav-item--active {
+    background: var(--surface-selected) !important;
+    color: var(--el-color-primary) !important;
+}
+
+.tox .tox-source-code,
+.tox .tox-source-code textarea {
+    background: var(--surface-container) !important;
+    color: var(--el-text-color-primary) !important;
+    border-color: var(--light-border-color) !important;
+}
+
+/* ---- TinyMCE MD3 end ---- */
+:root {
+    color-scheme: dark;
+    --el-color-primary: #adc6ff;
+    --el-color-primary-dark-2: #91b6ff;
+    --el-color-primary-light-3: #c0d3ff;
+    --el-color-primary-light-5: #d1e0ff;
+    --el-color-primary-light-7: #dce7ff;
+    --el-color-primary-light-8: #243041;
+    --el-color-primary-light-9: #1d2736;
+    --el-color-success: #7bd88f;
+    --el-color-success-light-9: #1c3523;
+    --el-color-warning: #ffb86b;
+    --el-color-danger: #ff8a80;
+    --el-border-radius-base: 16px;
+    --el-border-radius-round: 999px;
+    --el-border-radius-small: 12px;
+    --el-border-radius-large: 24px;
+
+    --app-background: #101114;
+    --surface-background: #17181c;
+    --surface-muted: #1e2025;
+    --surface-container: #1b1d22;
+    --surface-container-high: #23262d;
+    --surface-container-highest: #2c3038;
+    --surface-hover: rgba(173, 198, 255, 0.08);
+    --surface-press: rgba(173, 198, 255, 0.14);
+    --surface-selected: rgba(173, 198, 255, 0.16);
+    --extra-light-fill: #101114;
+    --light-ill: #1e2025;
+    --light-border: #31353d;
+    --header-actions-border: inset 0 -1px 0 0 rgba(255, 255, 255, 0.06);
+    --aside-backgound: #111318;
+    --loadding-background: rgba(16, 17, 20, 0.84);
+    --dark-border: #4a4f59;
+    --base-fill: #23262d;
+    --regular-text-color: #b9c0cc;
+    --light-border-color: #31353d;
+    --aside-right-border: 0 0 0 1px rgba(255, 255, 255, 0.04);
+    --choose-account-background: rgba(173, 198, 255, 0.16);
+    --el-bg-color: #17181c;
+    --el-bg-color-page: #101114;
+    --el-bg-color-overlay: #17181c;
+    --el-fill-color-blank: #17181c;
+    --el-fill-color: #1b1d22;
+    --el-fill-color-light: #23262d;
+    --el-fill-color-lighter: #2c3038;
+    --el-fill-color-dark: #14161a;
+    --el-text-color-primary: #e3e2e6;
+    --el-text-color-regular: #c5c6d0;
+    --el-text-color-secondary: #aeb4bf;
+    --el-text-color-placeholder: #848b98;
+    --email-scroll-content-color: #aeb4bf;
+    --email-hover-background: rgba(173, 198, 255, 0.08);
+    --email-selected-background: rgba(173, 198, 255, 0.16);
+    --email-right-click-background: rgba(255, 184, 108, 0.18);
+    --login-border: none;
+    --form-desc-color: #aeb4bf;
+    --login-switch-color: #adc6ff;
+    --scrollbar-track-color: #727887;
+    --base-border-color: #31353d;
+    --secondary-text-color: #aeb4bf;
+    --message-block-color: rgba(255, 255, 255, 0.04);
+    --loading-hide-transition: all 200ms;
+    --md-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.24);
+    --md-shadow-2: 0 8px 24px rgba(0, 0, 0, 0.28);
+    --gmail-shadow: var(--md-shadow-1);
+    --el-border-color: #31353d;
+    --el-border-color-light: #31353d;
+    --el-border-color-lighter: #3a3f48;
+    --el-mask-color: rgba(0, 0, 0, 0.7);
+    --el-overlay-color: rgba(0, 0, 0, 0.7);
+}
+
+.el-input {
+    --el-input-text-color: var(--el-text-color-primary) !important;
+}
+
+.el-button,
+.el-button.is-round,
+.el-button.is-circle {
+    border-radius: 20px !important;
+    box-shadow: none !important;
+}
+
+.el-button:not(.is-text):not(.is-link) {
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.el-button:not(.is-text):not(.is-link) {
+    min-height: 40px;
+    border: 1px solid var(--base-border-color) !important;
+    background: var(--surface-container-high) !important;
+    color: var(--el-text-color-primary) !important;
+}
+
+.el-button:not(.is-text):not(.is-link):hover {
+    background: var(--surface-container-highest) !important;
+}
+
+.el-button--primary {
+    background: var(--el-color-primary) !important;
+    border-color: transparent !important;
+    color: #081a33 !important;
+    padding: 0 20px 0 20px !important;
+}
+
+.el-button--primary:hover,
+.el-button--primary:focus,
+.el-button--primary:active {
+    background: var(--el-color-primary-light-3) !important;
+    border-color: transparent !important;
+    color: #081a33 !important;
+}
+
+.el-input__wrapper,
+.el-textarea__inner,
+.el-select__wrapper,
+.el-date-editor.el-input__wrapper,
+.el-pager li,
+.el-pagination button {
+    border-radius: 16px !important;
+}
+
+.el-input__wrapper,
+.el-select__wrapper,
+.el-date-editor.el-input__wrapper {
+    background: var(--surface-container) !important;
+    border: 1px solid var(--base-border-color);
+    box-shadow: none !important;
+}
+
+.el-textarea__inner {
+    background: var(--surface-container) !important;
+    border: 1px solid var(--base-border-color) !important;
+    box-shadow: none !important;
+}
+
+.el-input__wrapper:hover,
+.el-select__wrapper:hover,
+.el-date-editor.el-input__wrapper:hover,
+.el-textarea__inner:hover {
+    border-color: #4c5360 !important;
+}
+
+.el-input.is-focus .el-input__wrapper,
+.el-select .is-focus .el-select__wrapper,
+.el-textarea__inner:focus,
+.el-date-editor.el-input__wrapper.is-focus {
+    border-color: var(--el-color-primary) !important;
+    box-shadow: 0 0 0 1px rgba(173, 198, 255, 0.35) !important;
+}
+
+.el-card,
+.el-dialog,
+.el-drawer,
+.el-message-box,
+.el-dropdown-menu,
+.el-popover.el-popper,
+.el-popper.is-pure,
+.el-table {
+    border-radius: 20px !important;
+    box-shadow: var(--md-shadow-1) !important;
+}
+.el-dropdown-menu__item{
+    border-radius: 20px !important;
+}
+.el-card,
+.el-dialog,
+.el-drawer,
+.el-message-box,
+.el-table,
+.el-dropdown-menu,
+.el-popover.el-popper,
+.el-popper.is-pure {
+    border: 1px solid var(--base-border-color) !important;
+    background: var(--surface-background) !important;
+}
+
+.el-table th.el-table__cell,
+.el-table tr,
+.el-table__inner-wrapper::before {
+    background: var(--surface-background);
+}
+
+.el-table tr:hover > td.el-table__cell {
+    background: var(--surface-hover) !important;
+}
+
+.el-table td.el-table__cell,
+.el-table th.el-table__cell {
+    border-bottom-color: var(--light-border-color) !important;
+}
+
+.el-switch {
+    --el-switch-on-color: #3ec561 !important;
+    --el-switch-off-color: #555b66 !important;
+}
+
+.el-popper__arrow,
+.el-tooltip__arrow {
+    display: none !important;
+}
+
+.el-tabs__item,
+.el-segmented,
+.el-radio-button__inner,
+.el-tag,
+.el-alert,
+.el-menu,
+.el-menu-item,
+.el-sub-menu__title {
+    border-radius: 16px;
+}
